@@ -116,7 +116,6 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
                             dialog.show(fragmentManager, "TAG_EVENT_DIALOG")
                             dialog.setDialogResult(object : HopeClassDialogFragment.OnMyDialogResult {
                                 override fun finish(person: String, day: String, hopedClassTime: String, isOn: String, isOff: String, type: String, region: String) {
-                                    Log.d("tes",person.toString())
                                     hopeClassTopicLikeService.hopeClassTopicLike(topicId,person, day, hopedClassTime, isOn, isOff, region, type).enqueue(object :
                                         Callback<resultResponse> {
                                         override fun onResponse(call: Call<resultResponse>, response: Response<resultResponse>) {
@@ -143,7 +142,7 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
                                 }
                             })
                         }
-                        getFragmentManager()?.let { it1 -> refreshFragment(this@HopeClassPageFragment, it1) }
+
                     }
                 }
                 1->{
@@ -157,8 +156,7 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
                                 Log.d("결과:", "실패 : $t")
                             }
                         })//희망 목록 받아오기
-                        val ft: FragmentTransaction = requireFragmentManager().beginTransaction()
-                        ft.detach(this@HopeClassPageFragment).attach(this@HopeClassPageFragment).commit()
+
                     }
 
                 }
@@ -167,10 +165,6 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
 
     }
 
-    fun refreshFragment(fragment: Fragment, fragmentManager: FragmentManager) {
-        val ft: FragmentTransaction = fragmentManager.beginTransaction()
-        ft.detach(fragment).attach(fragment).commit()
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
