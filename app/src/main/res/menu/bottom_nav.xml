@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="메뉴"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="홈"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_class_search"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="검색"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_class"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="수강중인 강의"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_mypage"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="마이페이지"
+        app:showAsAction="ifRoom"/>
+</menu>

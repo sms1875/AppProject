@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home.Menu.HopeClass.HopeClassDialogFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hopeClassAddLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostSelectNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="원하시는 수강인원 규모를 선택하세요"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hopeClassPostNumLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostSelectNum">
+
+            <RadioGroup
+                android:id="@+id/hopeClassPostNumGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostNum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:text="3명 이하"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostNum2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostNum2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="4~10명"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostNum3"
+                    app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostNum1"
+                    app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostNum1" />
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostNum3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="11~25명"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostNum4"
+                    app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostNum2"
+                    app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostNum1" />
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostNum4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="상관없음"
+                    android:checked="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostNum3"
+                    app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostNum1" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostSelectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="원하시는 강의 시간대를 선택하세요"
+            app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostSelectNum"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostNumLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hopeClassPostTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostSelectTime">
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:text="월"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostDate2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="화"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostDate3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostDate1"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostDate1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="수"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostDate4"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostDate2"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostDate1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="목"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostDate5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostDate3"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostDate1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="금"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostDate6"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostDate4"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostDate1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="토"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostDate5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostDate7"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostDate1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostDate7"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:text="일"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostDate6"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostDate1" />
+
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="오전"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostTime2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_hopeClassPostDate1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="오후"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostTime3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostTime1"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostTime1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostTime3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="저녁"
+                app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostTime4"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostTime2"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostTime1" />
+
+            <CheckBox
+                android:id="@+id/cb_hopeClassPostTime4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:text="심야"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostTime3"
+                app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostTime1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostSelectOnOffLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="원하시는 강의 형태를 선택하세요"
+            app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostSelectTime"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostTimeLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hopeClassPostOnOffLineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostSelectOnOffLine">
+
+            <RadioGroup
+                android:id="@+id/hopeClassPostOnOffLineGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostOnOffLine1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:text="온라인"
+                    android:checked="true"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostOnOffLine2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostOnOffLine2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="오프라인"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostOnOffLine1"
+                    app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostOnOffLine1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/hopeClassPostTypeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hopeClassPostOnOffLineGroup">
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostType1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:text="정규 강의"
+                    android:checked="true"
+                    app:layout_constraintEnd_toStartOf="@+id/cb_hopeClassPostOnOffLine4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cb_hopeClassPostOnOffLine1" />
+
+                <RadioButton
+                    android:id="@+id/cb_hopeClassPostType2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="원데이 클래스"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cb_hopeClassPostOnOffLine3"
+                    app:layout_constraintTop_toTopOf="@+id/cb_hopeClassPostOnOffLine3" />
+
+            </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hopeClassPostRegionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostOnOffLineLayout">
+
+            <TextView
+                android:id="@+id/text_hopeClassPostRegion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="지역을 선택해 주세요"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_hopeClassPostRegionselect1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_hopeClassPostRegion" />
+
+            <Spinner
+                android:id="@+id/spinner_hopeClassPostRegionselect2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="30sp"
+                app:layout_constraintStart_toEndOf="@+id/spinner_hopeClassPostRegionselect1"
+                app:layout_constraintTop_toTopOf="@+id/spinner_hopeClassPostRegionselect1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_hopeClassLike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="공감"
+            app:layout_constraintEnd_toStartOf="@+id/btn_hopeClassLikeCancle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostRegionLayout" />
+
+        <Button
+            android:id="@+id/btn_hopeClassLikeCancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_hopeClassLike"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostRegionLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Class.ClassInfo.ClassInfoTabFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_classCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="카테고리 : 국어 영어 수학 미술 음악 체육"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_classPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="수강료 : 50000원"
+            app:layout_constraintStart_toStartOf="@+id/txt_classCategory"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classCategory" />
+
+        <TextView
+            android:id="@+id/txt_classDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="수강 기간 : 2022년 1월 1일 - 2022년 11월 11일"
+            app:layout_constraintStart_toStartOf="@+id/txt_classPrice"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classPrice" />
+
+        <TextView
+            android:id="@+id/txt_classTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="강의 시간 : 15시 30분 - 17시 30분"
+            app:layout_constraintStart_toStartOf="@+id/txt_classDate"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classDate" />
+
+        <TextView
+            android:id="@+id/txt_classAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="강의 장소 : 충북 청주시 서원구 개신동 충북대학교 AB-C"
+            app:layout_constraintStart_toStartOf="@+id/txt_classTime"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classTime" />
+
+
+        <TextView
+            android:id="@+id/txt_classInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="강의소개\n2\n3\n4\n5\n6\n"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classAddress"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+
+

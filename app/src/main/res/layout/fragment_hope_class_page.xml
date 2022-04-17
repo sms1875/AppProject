@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Home.Menu.HopeClass.HopeClassPageFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostInfoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="글제목"
+            android:lines="1"
+            android:singleLine="true"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostInfoCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="카테고리 : 국어 영어 수학 미술 음악 체육"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostInfoTitle" />
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostInfoNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="희망하는 수강인원 규모"
+            app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoCategory"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostInfoCategory" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/hopeClassPostInfoBarChart1"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostInfoNum" />
+
+        <TextView
+            android:id="@+id/txt_hopeClassPostInfoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="희망하는 강의 시간대"
+            app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoNum"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoBarChart1" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/hopeClassPostInfoBarChart2"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostInfoTime" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/hopeClassPostInfoBarChart3"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoBarChart2" />
+
+        <TextView
+            android:id="@+id/txt_classTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="희망하는 강의 형태 "
+            app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoTime"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoBarChart3" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/hopeClassPostInfoPieChart1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toStartOf="@+id/hopeClassPostInfoPieChart2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classTime"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/hopeClassPostInfoPieChart2"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/hopeClassPostInfoPieChart1"
+            app:layout_constraintTop_toTopOf="@+id/hopeClassPostInfoPieChart1"/>
+
+        <TextView
+            android:id="@+id/txt_classRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="희망하는 강의 지역 "
+            app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoTime"
+            app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoPieChart2" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classRegion" />
+
+        <TextView
+            android:id="@+id/txt_classInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="강의소개\n2\n3\n4\n5\n6\n"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map"/>
+
+        <Button
+            android:id="@+id/btn_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공감버튼"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classInfo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hopeClassCommentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gray_ellipse"
+        app:layout_constraintTop_toBottomOf="@+id/btn_like">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hopeClassTopicComment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_hope_class_comment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

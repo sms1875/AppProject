@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.MypageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/myPageBaseLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="환영합니다"
+            android:textStyle=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_myPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정보 수정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_logout" />
+
+        <Button
+            android:id="@+id/btn_appSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="환경설정"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_myPage" />
+
+
+
+
+        <Button
+            android:id="@+id/btn_classHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수강 내역"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일정관리"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_classHistory"
+            app:layout_constraintVertical_bias="0.098" />
+
+        <Button
+            android:id="@+id/btn_instructorRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강사 신청"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_schedule" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tutorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorGray"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/myPageBaseLayout">
+
+        <Button
+            android:id="@+id/btn_editTutorInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강사정보 수정"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_myClassList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 강의 이력"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_editTutorInfo" />
+
+        <Button
+            android:id="@+id/btn_classCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강의 개설"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_myClassList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

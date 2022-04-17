@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="title">마이페이지</string>
+    <string name="로그인">로그인</string>
+    <string name="회원가입">회원가입</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="startDateTime">시작일 : %1$s</string>
+    <string name="endDateTime">종료일 : %1$s</string>
+    <string name="classname">classname</string>
+    <string name="name">name</string>
+</resources>

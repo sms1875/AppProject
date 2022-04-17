@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Class.ClassCreateActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createFirstPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edit_className"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:hint="강의 제목"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_selectCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="카테고리 선택"
+            app:layout_constraintBottom_toTopOf="@+id/checkA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_className" />
+
+        <CheckBox
+            android:id="@+id/checkA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="A"
+            app:layout_constraintEnd_toStartOf="@+id/checkB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_className" />
+
+        <CheckBox
+            android:id="@+id/checkB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="B"
+            app:layout_constraintEnd_toStartOf="@+id/checkC"
+            app:layout_constraintStart_toEndOf="@+id/checkA"
+            app:layout_constraintTop_toBottomOf="@+id/edit_className" />
+
+        <CheckBox
+            android:id="@+id/checkC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="C"
+            app:layout_constraintEnd_toStartOf="@+id/checkD"
+            app:layout_constraintStart_toEndOf="@+id/checkB"
+            app:layout_constraintTop_toBottomOf="@+id/edit_className" />
+
+        <CheckBox
+            android:id="@+id/checkD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkC"
+            app:layout_constraintTop_toBottomOf="@+id/edit_className" />
+
+        <EditText
+            android:id="@+id/edit_classPrice"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:hint="수강료"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkA" />
+
+        <EditText
+            android:id="@+id/edit_classInfo"
+            android:layout_width="340dp"
+            android:layout_height="400dp"
+            android:hint="강의 소개"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_nextPage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_classPrice" />
+
+        <Button
+            android:id="@+id/btn_nextPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다음 페이지"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/createSecendPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:enabled="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_classImage"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_imageSelect"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="이미지선택"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_classImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_classImage"
+            app:layout_constraintTop_toTopOf="@+id/iv_classImage" />
+
+        <TextView
+            android:id="@+id/txt_selectDate"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:ems="10"
+            android:text="Date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_classImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/iv_classImage"
+            app:layout_constraintTop_toBottomOf="@+id/iv_classImage"
+            app:layout_constraintVertical_bias="0.109" />
+
+        <Button
+            android:id="@+id/btn_createClassStartDate"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:text="시작일"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_selectDate"
+            app:layout_constraintEnd_toStartOf="@+id/btn_createClassEndDate"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txt_selectDate"
+            app:layout_constraintTop_toTopOf="@+id/txt_selectDate" />
+
+        <Button
+            android:id="@+id/btn_createClassEndDate"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="종료일"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_createClassStartDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toEndOf="@+id/txt_selectDate"
+            app:layout_constraintTop_toTopOf="@+id/btn_createClassStartDate"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txt_selectTime"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:ems="10"
+            android:text="Time"
+            app:layout_constraintBottom_toTopOf="@+id/btn_createClass"
+            app:layout_constraintEnd_toEndOf="@+id/txt_selectDate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_selectDate"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selectDate"
+            app:layout_constraintVertical_bias="0.169" />
+
+        <Button
+            android:id="@+id/btn_createClassStartTime"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:text="시작시간"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_selectTime"
+            app:layout_constraintEnd_toStartOf="@+id/btn_createClassEndTime"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txt_selectTime"
+            app:layout_constraintTop_toTopOf="@+id/txt_selectTime"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <Button
+            android:id="@+id/btn_createClassEndTime"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="종료시간"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_createClassStartTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toEndOf="@+id/txt_selectTime"
+            app:layout_constraintTop_toTopOf="@+id/btn_createClassStartTime"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/txt_selectOnOffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="수업 방식 선택"
+            app:layout_constraintBottom_toTopOf="@+id/checkOnline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selectTime"
+            app:layout_constraintVertical_bias="0.836" />
+
+        <CheckBox
+            android:id="@+id/checkOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="online 수업"
+            app:layout_constraintEnd_toStartOf="@+id/checkOffline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selectTime" />
+
+        <CheckBox
+            android:id="@+id/checkOffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Offline 수업"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/checkOnline"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selectTime" />
+
+        <EditText
+            android:id="@+id/edit_classAddress"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="44dp"
+            android:hint="주소입력"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_createClass"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkOnline" />
+
+        <Button
+            android:id="@+id/btn_createClass"
+            android:ems="10"
+            android:text="강의개설"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

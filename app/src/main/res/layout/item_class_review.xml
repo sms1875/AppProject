@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:background="@color/cardview_shadow_start_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <RatingBar
+        android:id="@+id/item_userReviewRatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:isIndicator="true"
+        android:max="5"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toEndOf="@+id/item_classReviewerName"
+        app:layout_constraintTop_toTopOf="@+id/item_classReviewerName" />
+
+    <TextView
+        android:id="@+id/item_classReviewerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="송명석"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_userReviewContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="리뷰글자테스트1aaaaaaa2345678912
+        3456789zxcvbnasdfgqwertyttaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+        app:layout_constraintStart_toStartOf="@+id/item_classReviewerName"
+        app:layout_constraintTop_toBottomOf="@+id/item_classReviewerName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

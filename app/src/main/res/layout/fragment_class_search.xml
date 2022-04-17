@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Class.ClassSearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edit_classSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="검색"
+            android:lines="1"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeSearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_classSearch">
+
+            <Button
+                android:id="@+id/btn_category1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="A"
+                app:layout_constraintEnd_toStartOf="@+id/btn_category2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_category2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="B"
+                app:layout_constraintEnd_toStartOf="@+id/btn_category3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_category1"
+                app:layout_constraintTop_toTopOf="@+id/btn_category1" />
+
+            <Button
+                android:id="@+id/btn_category3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="C"
+                app:layout_constraintEnd_toStartOf="@+id/btn_category4"
+                app:layout_constraintStart_toEndOf="@+id/btn_category2"
+                app:layout_constraintTop_toTopOf="@+id/btn_category1" />
+
+            <Button
+                android:id="@+id/btn_category4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:text="D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_category3"
+                app:layout_constraintTop_toTopOf="@+id/btn_category1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_searchedClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/homeSearchLayout"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:listitem="@layout/item_class" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

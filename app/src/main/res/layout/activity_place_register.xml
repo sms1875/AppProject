@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.Menu.Place.PlaceRegisterActivity">
+
+
+    <EditText
+        android:id="@+id/edit_detail"
+        android:layout_width="133dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="240dp"
+        android:ems="10"
+        android:hint="detail"
+        app:layout_constraintEnd_toStartOf="@+id/iv_test"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_type"
+        android:layout_width="133dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:hint="type"
+        app:layout_constraintEnd_toStartOf="@+id/iv_test"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_cost"
+        android:layout_width="133dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="304dp"
+        android:ems="10"
+        android:hint="cost"
+        app:layout_constraintEnd_toStartOf="@+id/iv_test"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_position"
+        android:layout_width="133dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:hint="position"
+        app:layout_constraintEnd_toStartOf="@+id/iv_test"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_placename"
+        android:layout_width="133dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="placename"
+        app:layout_constraintEnd_toStartOf="@+id/iv_test"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_captureImage"
+        android:layout_width="98dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:text="사진 촬영"
+        android:enabled="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_startTime"
+        app:layout_constraintEnd_toStartOf="@+id/btn_UploadImgae"
+        app:layout_constraintTop_toBottomOf="@+id/iv_test"
+        app:layout_constraintVertical_bias="0.021" />
+    <!--카메라구현-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/iv_test"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btn_UploadImgae"
+        android:layout_width="98dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="갤러리"
+        app:layout_constraintBottom_toTopOf="@+id/btn_startTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_test"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <Button
+        android:id="@+id/btn_placeRegister"
+        android:layout_width="278dp"
+        android:layout_height="38dp"
+
+        android:layout_marginTop="272dp"
+        android:ems="10"
+
+        android:text="장소 등록"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_test" />
+
+    <Button
+        android:id="@+id/btn_endDate"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:text="날짜"
+        app:layout_constraintBottom_toTopOf="@+id/btn_placeRegister"
+        app:layout_constraintEnd_toStartOf="@+id/btn_endTime" />
+
+    <TextView
+        android:id="@+id/txt_startDate"
+        android:layout_width="39dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:text="시작일"
+        app:layout_constraintBottom_toTopOf="@+id/txt_endDate"
+
+        app:layout_constraintEnd_toStartOf="@+id/btn_startDate"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_endDate"
+        android:layout_width="39dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:text="마감일"
+        app:layout_constraintBottom_toTopOf="@+id/btn_placeRegister"
+
+        app:layout_constraintEnd_toStartOf="@+id/btn_endDate"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_endTime"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:text="시간"
+        app:layout_constraintBottom_toTopOf="@+id/btn_placeRegister"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_startDate"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="4dp"
+        android:text="날짜"
+        app:layout_constraintBottom_toTopOf="@+id/btn_endDate"
+        app:layout_constraintEnd_toStartOf="@+id/btn_startTime" />
+
+    <Button
+        android:id="@+id/btn_startTime"
+        android:layout_width="114dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="4dp"
+        android:text="시간"
+        app:layout_constraintBottom_toTopOf="@+id/btn_endTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_test"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
