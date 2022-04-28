@@ -1,6 +1,7 @@
 package com.example.application.Home.Menu.HopeClass
 
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.application.*
+import com.example.application.Class.ClassCreateActivity
 import com.example.application.databinding.FragmentHopeClassPageBinding
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.PieChart
@@ -82,6 +84,17 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
         val mapFragment = childFragmentManager.findFragmentById(binding.map.id) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        if(SharedPreferences.prefs.getString("userType","")=="강사"){
+            with(binding.btnCreatHopeClass){
+                visibility=View.VISIBLE
+                isEnabled=true
+                setOnClickListener {
+                    val intent_classCreate= Intent(context, ClassCreateActivity::class.java)
+                    intent_classCreate.putExtra("topicId",topicId)
+                    startActivity(intent_classCreate)
+                }
+            }
+        }
 
         with(hopeClassPage) {
             binding.txtHopeClassPostInfoTitle.text = desiredTitle
@@ -124,6 +137,7 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
                                                 "success" -> {
                                                     val toast = Toast.makeText(requireContext(), "개설되었습니다", Toast.LENGTH_SHORT)
                                                     toast.show()
+                                                    remove()
                                                 }//
                                                 "fail" -> {
                                                     val toast = Toast.makeText(requireContext(), "개설에 실패했습니다", Toast.LENGTH_SHORT)
@@ -151,6 +165,7 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
                         hopeClassTopicLikeCancelService.hopeClassTopicLikeCancel(topicId).enqueue(object : Callback<resultResponse> {
                             override fun onResponse(call: Call<resultResponse>, response: Response<resultResponse>) {
                                 Log.d("결과:", "성공 : $response")
+                                remove()
                             }
                             override fun onFailure(call: Call<resultResponse>, t: Throwable) {
                                 Log.d("결과:", "실패 : $t")
@@ -165,10 +180,17 @@ class HopeClassPageFragment : Fragment(), OnMapReadyCallback {
 
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun remove(){
+        val toast = Toast.makeText(requireContext(), "완료되었습니다", Toast.LENGTH_SHORT)
+        toast.show()
+        val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
+        fragmentManager.beginTransaction().remove(this).commit()
+        fragmentManager.popBackStack()
     }
 
     //맵뷰 설정

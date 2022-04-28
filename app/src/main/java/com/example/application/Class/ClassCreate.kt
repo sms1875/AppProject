@@ -63,6 +63,8 @@ class ClassCreateActivity  : AppCompatActivity() {
         val TOKEN = SharedPreferences.prefs.getString("key","key")
         val ClassCreateService = ServiceGenerator.createService(ClassCreateInterface::class.java, TOKEN)
 
+        val topicId = intent.getExtras()?.getString("topicId")
+
 
         binding.btnNextPage.setOnClickListener{
             binding.createFirstPage.visibility= View.GONE
@@ -180,18 +182,20 @@ class ClassCreateActivity  : AppCompatActivity() {
             textHashMap["start_time"] = start_timeRequestBody
             textHashMap["end_date"] = end_dateRequestBody
             textHashMap["end_time"] = end_timeRequestBody
+            //textHashMap["day_time"] = end_timeRequestBody
             textHashMap["classOnOffline"] = classOnOfflineRequestBody
             textHashMap["classAddress"] = classAddressRequestBody
             textHashMap["classCategory"] = classCategoryRequestBody
 
 
-            Log.d("a", textHashMap.toString())
+
 
 
             val file = File(path)
             val requestFile = RequestBody.create("image/*".toMediaTypeOrNull(), file)
             val body = MultipartBody.Part.createFormData("filename", file.name, requestFile)
 
+            Log.d("a", textHashMap.toString())
 
             if (binding.editClassName.text.toString() == "" || binding.editClassPrice.text.toString() == "") {
                 val toast =
@@ -206,6 +210,11 @@ class ClassCreateActivity  : AppCompatActivity() {
                 )
                 toast.show()
             }*/
+
+
+            if(topicId!=null){
+                Log.d("test516515","15615656156")
+            }
 
             with(ClassCreateService) {
                 creatClass(body,textHashMap).enqueue(object : Callback<resultResponse> {

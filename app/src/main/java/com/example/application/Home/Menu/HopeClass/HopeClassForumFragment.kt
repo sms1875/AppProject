@@ -88,7 +88,7 @@ class HopeClassForumFragment : Fragment() {
         }
         var searchCategory=""//검색옵션
         with(binding.spinnerHopeClassSearchOption) {
-            val typeList=resources.getStringArray(R.array.hopeClassSearchOption)
+            val typeList=resources.getStringArray(R.array.classCategory)
             val searchOptionAdapter = SearchOptionAdapter(context, android.R.layout.simple_spinner_dropdown_item, typeList)
             adapter = searchOptionAdapter
             onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
@@ -160,12 +160,6 @@ class HopeClassForumFragment : Fragment() {
     }
 }
 
-class SearchOptionAdapter(context: Context?, resource: Int, objects: Array<String?>?) :
-    ArrayAdapter<String?>(context!!, resource, objects!!) {
-    override fun getCount(): Int {
-        return super.getCount()
-    }
-}//검색 옵션 어댑터 설정
 
 
 interface hopeClassForumInterface {

@@ -3,6 +3,7 @@ package com.example.application
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
+import retrofit2.http.Field
 import java.util.*
 
 
@@ -15,6 +16,13 @@ data class loginResponse(
 
 data class resultResponse(
     @SerializedName("result") val result: String
+)
+
+data class instructorInfo(
+    @SerializedName("licenseInfo") val licenseInfo: String,
+    @SerializedName("historyInfo") val historyInfo: String,
+    @SerializedName("areaInfo") val areaInfo: String,
+    @SerializedName("selfIntroduce") val selfIntroduce: String
 )
 
 /***************로그인 관련 응답 형식*********************/
@@ -30,6 +38,12 @@ data class classData(
 
 data class classDataList (
     @SerializedName("classData") val classData: List<classData>,
+)
+
+data class dayTime(
+    @SerializedName("day") var date: String="",
+    @SerializedName("startTime") var startTime: String="",
+    @SerializedName("endTime") var endTime: String="",
 )
 
 /***************강의 목록 데이터*********************/
@@ -53,6 +67,17 @@ data class classDetailInfo(
 
 /***************강의 정보 확인 데이터*********************/
 
+data class QnAPostList(
+    @SerializedName("QnAId") var QnAId: String="",
+    @SerializedName("QnAgroupId") var QnAgroupId: String="",
+    @SerializedName("QnAauther") var QnAauther: String="",
+    @SerializedName("QnAtitle") var QnAtitle: String="",
+    @SerializedName("QnAdate") var QnAdate: String=""
+)
+
+
+/***************강의 정보 유저 리뷰 데이터*********************/
+
 data class userReview(
     @SerializedName("userId") var userId: String="",
     @SerializedName("reviewContent") var reviewContent: String="",
@@ -63,8 +88,9 @@ data class userReviewList(
     @SerializedName("reviewData") val reviewData: List<userReview>,
 )
 
-/***************강의 정보 유저 리뷰 데이터*********************/
 
+
+/***************QNA*********************/
 data class hopeClassTopic(
     @SerializedName("desiredTitle") var desiredTitle: String="",
     @SerializedName("category") var category: String="",
@@ -178,7 +204,6 @@ data class scheduleDataList (
     @SerializedName("openedClass") val opendClass: List<scheduleData>,  // 개설한 강의
     @SerializedName("registeredClass") val registeredClass: List<scheduleData>,  // 수강중인 강의
 )
-
 
 
 data class schedulelist(

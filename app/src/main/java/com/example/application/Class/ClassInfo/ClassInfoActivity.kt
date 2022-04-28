@@ -26,7 +26,7 @@ class ClassInfoActivity : AppCompatActivity() {
     lateinit var classInfo:classDetailInfo
     lateinit var classid:String
 
-    val fragmentList = listOf(ClassInfoTabFragment(), ClassReviewTabFragment(), ProfessorInfoFragment())
+    val fragmentList = listOf(ClassInfoTabFragment(), ClassReviewTabFragment(), ClassQnATab())
 
     private lateinit var binding: ActivityClassInfoBinding
 
@@ -36,7 +36,7 @@ class ClassInfoActivity : AppCompatActivity() {
         binding = ActivityClassInfoBinding.inflate(layoutInflater)
 
         classid= intent.getStringExtra("classID").toString() //POST요청에 사용할 classid
-        var myClass= intent.getStringExtra("myClass").toString() //POST요청에 사용할 classid
+        val myClass= intent.getStringExtra("myClass").toString() //POST요청에 사용할 classid
 
 
 
@@ -53,7 +53,7 @@ class ClassInfoActivity : AppCompatActivity() {
             override fun onResponse(call: Call<classDetailInfo>, response: Response<classDetailInfo>) {
                 Log.d("ㅁㅁㅁㅁㅁㅁㅁㅁ", " : ${response.body()}")
                 classInfo = response.body()!!
-                var uri = classInfo.classImage.split(",")
+                val uri = classInfo.classImage.split(",")
                 Glide
                     .with(this@ClassInfoActivity)
                     .load("http://121.188.98.211:1350/db/class/getImg/" + uri[0])
@@ -66,7 +66,7 @@ class ClassInfoActivity : AppCompatActivity() {
                     viewPager.adapter = pagerAdatper
                     viewPager.setUserInputEnabled(false)//좌우 스와이프 막기
 
-                    val titles = listOf("수업 정보", "리뷰", "강사 정보")
+                    val titles = listOf("수업 정보", "리뷰", "QnA게시판")
                     TabLayoutMediator(binding.classInfoTabLayout, binding.viewPager) { tab, position ->
                         tab.text = titles.get(position)
                     }.attach()
@@ -90,7 +90,6 @@ class ClassInfoActivity : AppCompatActivity() {
                         "success" -> {
                             val toast = Toast.makeText(applicationContext, binding.txtClassName.text.toString()+" 신청이 완료되었습니다", Toast.LENGTH_SHORT)
                             toast.show()
-
                             finish()
                         }//로그인성공
                         "fail" -> {
@@ -164,6 +163,7 @@ class ClassInfoActivity : AppCompatActivity() {
             return when (position) {
                 0 -> ClassInfoTabFragment.newInstant(classData)
                 1 -> ClassReviewTabFragment.newInstant(classData)
+                2 -> ClassQnATab.newInstant(classData)
                 else -> fragmentList.get(position)
             }
         }

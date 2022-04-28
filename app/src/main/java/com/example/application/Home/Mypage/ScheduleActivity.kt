@@ -37,9 +37,9 @@ class ScheduleActivity : AppCompatActivity() {
 
         binding = ActivityScheduleBinding.inflate(layoutInflater)
 
-        var materialCalendarView = binding.calendarView
+        val materialCalendarView = binding.calendarView
 
-        var TOKEN=SharedPreferences.prefs.getString("key","key")
+        val TOKEN=SharedPreferences.prefs.getString("key","key")
         val getScheduleService = ServiceGenerator.createService(getScheduleInterface::class.java,TOKEN)
 
         getScheduleService.getSchedule().enqueue(object : Callback<scheduleDataList> {
@@ -146,10 +146,12 @@ class ScheduleActivity : AppCompatActivity() {
             materialCalendarView.setOnDateChangedListener { widget, date, selected ->
                 for(i in schedulett.iterator()){
                     if(i.date==date.date) {
-                        Toast.makeText(this,i.schedule, Toast.LENGTH_SHORT).show()
+                        binding.textView2.text=i.schedule
+                        break
                     }
-                    else
-                        textview.text=""
+                    else {
+                        binding.textView2.text=""
+                    }
                 }
              }
 

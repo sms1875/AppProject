@@ -13,8 +13,8 @@ import com.example.application.databinding.FragmentClassSearchBinding
 import android.util.Log
 import android.view.KeyEvent
 import android.view.KeyEvent.KEYCODE_ENTER
+import android.widget.AdapterView
 import android.widget.Toast
-
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,14 +31,6 @@ class ClassSearchFragment : Fragment() {
 
     private var searchedClassList = mutableListOf<classData>()
 
-    private var category = ""
-    private var string = ""
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentClassSearchBinding.inflate(inflater, container, false)
@@ -51,48 +43,47 @@ class ClassSearchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val classSearchService = ServiceGenerator.createService(classSearchInterface::class.java)
 
-        binding.editClassSearch.setOnKeyListener { v, keyCode, event ->
-            if (event.action == KeyEvent.ACTION_DOWN && keyCode == KEYCODE_ENTER) {
-                category=""
-                string=binding.editClassSearch.text.toString()
-/*
-                if(binding.btnCategory1.isChecked==true) category+="A%"
-                if(binding.btnCategory2.isChecked==true) category+="B%"
-                if(binding.btnCategory3.isChecked==true) category+="C%"
-                if(binding.btnCategory4.isChecked==true) category+="D%"
-*/
 
-                classSearchService.classSearch(string,category).enqueue(object : Callback<classDataList> {
-                    override fun onResponse(call: Call<classDataList>, response: Response<classDataList>) {
-                        Log.d("결과:", response.body().toString())
-                        if (response.body()?.classData==null) {
-                            searchedClassList =mutableListOf<classData>()
-                        }
-                        else
-                            searchedClassList=response.body()?.classData as ArrayList<classData>
-                        initRecycler()
+
+        var searchCategory=""//검색옵션
+        with(binding.spinnerClassSearchOption) {
+            val typeList=resources.getStringArray(com.example.application.R.array.classCategory)
+            val searchOptionAdapter = SearchOptionAdapter(context, android.R.layout.simple_spinner_dropdown_item, typeList)
+            adapter = searchOptionAdapter
+            onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    when(position){
+                        0-> searchCategory=""
+                        1-> searchCategory="A"
+                        2-> searchCategory="B"
+                        3-> searchCategory="C"
+                        4-> searchCategory="D"
                     }
-                    override fun onFailure(call: Call<classDataList>, t: Throwable) {
-                        Log.d("결과:", "실패 : $t")
-                    }
-                })
-
-
-            }
-            false
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                }
+            }//검색 옵션 설정
         }
 
-        binding.btnCategory1.setOnClickListener {
-            Toast.makeText(requireContext(), "구현중입니다", Toast.LENGTH_SHORT).show()
-        }
-        binding.btnCategory2.setOnClickListener {
-            Toast.makeText(requireContext(), "구현중입니다", Toast.LENGTH_SHORT).show()
-        }
-        binding.btnCategory3.setOnClickListener {
-            Toast.makeText(requireContext(), "구현중입니다", Toast.LENGTH_SHORT).show()
-        }
-        binding.btnCategory4.setOnClickListener {
-            Toast.makeText(requireContext(), "구현중입니다", Toast.LENGTH_SHORT).show()
+
+        binding.btnClassSearch.setOnClickListener {
+
+            var searchString=""
+            searchString= binding.editClassSearch.text.toString()
+
+            classSearchService.classSearch(searchString,searchCategory).enqueue(object : Callback<classDataList> {
+                override fun onResponse(call: Call<classDataList>, response: Response<classDataList>) {
+                    Log.d("결과:", response.body().toString())
+
+                    searchedClassList=response.body()?.classData as MutableList<classData>
+
+                    initRecycler()
+                }
+                override fun onFailure(call: Call<classDataList>, t: Throwable) {
+                    Log.d("결과:", "실패 : $t")
+                }
+            })
+
         }
     }
 

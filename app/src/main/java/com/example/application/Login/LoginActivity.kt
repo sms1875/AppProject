@@ -53,9 +53,9 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnRegister.setOnClickListener{
 
-            startActivity(intent_main)
-            finish()
-            //startActivity(intent_register)
+            //startActivity(intent_main)
+           //finish()
+            startActivity(intent_register)
         }//회원가입 버튼
 
         binding.btnLogin.setOnClickListener {
