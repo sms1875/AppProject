@@ -43,8 +43,8 @@ class RegisterActivity : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
             override fun afterTextChanged(p0: Editable?) {
-                var password=binding.editPassword.text.toString()
-                var password2=binding.editPassword2.text.toString()
+                val password=binding.editPassword.text.toString()
+                val password2=binding.editPassword2.text.toString()
                 if(password.equals(password2)) binding.txtPasswordConfirm.setText("일치합니다.")
                 else binding.txtPasswordConfirm.setText("일치하지 않습니다.")
                 Log.e("실패", password+password2)
@@ -52,7 +52,7 @@ class RegisterActivity : AppCompatActivity() {
         })//비밀번호 중복 검사
 
         binding.btnIdConfirm.setOnClickListener {
-            var userid=binding.editId.text.toString()
+            val userid=binding.editId.text.toString()
             idConfirmService.idConfirm(userid).enqueue(object : Callback<resultResponse> {
                 override fun onResponse(call: Call<resultResponse>, response: Response<resultResponse>) {
                     val result = response.body()
@@ -82,12 +82,12 @@ class RegisterActivity : AppCompatActivity() {
         }//아이디 중복검사 버튼
 
         binding.btnRegister.setOnClickListener {
-            var userid=binding.editId.text.toString()
-            var password=binding.editPassword.text.toString()
-            var password2=binding.editPassword2.text.toString()
-            var name=binding.editName.text.toString()
-            var idConfirm = binding.btnIdConfirm.text.toString()
-            var usertel = binding.editPhoneNum.text.toString()
+            val userid=binding.editId.text.toString()
+            val password=binding.editPassword.text.toString()
+            val password2=binding.editPassword2.text.toString()
+            val name=binding.editName.text.toString()
+            val idConfirm = binding.btnIdConfirm.text.toString()
+            val usertel = binding.editPhoneNum.text.toString()
 
 
             if(userid == ""|| password== ""|| name== "") {

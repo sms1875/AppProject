@@ -33,31 +33,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975" />
 
-    <TextView
-        android:id="@+id/edit_3"
-        android:layout_width="173dp"
-        android:layout_height="29dp"
-        android:ems="10"
-        android:text="직업"
-        app:layout_constraintBottom_toTopOf="@+id/spinner_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
-
     <EditText
         android:id="@+id/edit_phoneNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
         android:ems="10"
-        app:layout_constraintBottom_toTopOf="@+id/spinner_register"
+        app:layout_constraintBottom_toTopOf="@+id/btn_UpdateInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.606" />
 
     <EditText
         android:id="@+id/edit_name"
@@ -67,19 +53,6 @@
         android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/edit_phoneNum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Spinner
-        android:id="@+id/spinner_register"
-        android:layout_width="280dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="132dp"
-        android:ems="10"
-        app:layout_constraintBottom_toTopOf="@+id/btn_UpdateInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />

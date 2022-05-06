@@ -63,20 +63,45 @@
         <entry key="..\:/Users/user/coding/android/project 0126 2.2 10/project/app/src/main/res/layout/multi_image_item.xml" value="0.2817028985507246" />
         <entry key="..\:/Users/user/coding/android/project 0126 2.2 10/project/app/src/main/res/layout/placeimageviewpager.xml" value="0.2140625" />
         <entry key="..\:/Users/user/coding/android/project 0126 2.2 10/project/app/src/main/res/menu/bottom_nav.xml" value="0.40572916666666664" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_class_create.xml" value="0.33" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_class_info.xml" value="0.33" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_place_detail.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_place_register.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_register.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_schedule.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/activity_user_info.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_class.xml" value="0.26811594202898553" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_class_info_tab.xml" value="0.359375" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_class_qna_tab.xml" value="0.359375" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_class_review_tab.xml" value="0.26811594202898553" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_class_search.xml" value="0.26811594202898553" />
-        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_hope_class_forum.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_class_signup.xml" value="0.25" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_home.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_hope_class_dialog.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_hope_class_forum.xml" value="0.33" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_hope_class_page.xml" value="0.359375" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_hope_class_post.xml" value="0.359375" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_instructor_info_edit.xml" value="0.359375" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_instructor_registrer.xml" value="0.359375" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_menu.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_my_register_place.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_mypage.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_open_class.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_place.xml" value="0.26811594202898553" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_professor_info.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_reopen_dialog.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_reservation_place.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/fragment_review_dialog.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_banner.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_class.xml" value="0.26811594202898553" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_class_QnA.xml" value="0.359375" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_class_btn.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_class_qna.xml" value="0.48854166666666665" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_class_qna_reply.xml" value="0.3625" />
         <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_class_review.xml" value="0.359375" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/layout/item_hope_class_comment.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/menu/bottom_nav.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.319" />
       </map>
     </option>
   </component>
