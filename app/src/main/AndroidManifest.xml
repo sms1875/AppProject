@@ -35,24 +35,6 @@
             android:name="org.apache.http.legacy"
             android:required="false"/>
 
-        <activity
-            android:name="com.example.application.Home.Menu.HopeClass.HopeClassActivtiy"
-            android:exported="false">
-        </activity>
-
-        <activity
-            android:name=".Class.ClassInfo.ClassInfoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ScheduleActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.application.Home.Menu.Place.PlaceDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Login.UserInfoActivity"
-            android:exported="false" />
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
@@ -64,19 +46,38 @@
         </provider>
 
         <activity
-            android:name=".Class.ClassCreateActivity"
+            android:name=".ui.Home.Menu.HopeClass.HopeClassActivtiy"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".ui.Class.ClassInfo.ClassInfoActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.application.Home.Menu.Place.PlaceRegisterActivity"
+            android:name=".ScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.Home.Menu.Place.PlaceDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Login.RegisterActivity"
+            android:name=".ui.auth.UserInfoActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".ui.Class.ClassCreateActivity"
             android:exported="false" />
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".ui.Home.Menu.Place.PlaceRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
