@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:text="나의 희망강의"
+                android:text="관심있는 희망강의"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_hopeClassForum" />
 
@@ -98,7 +98,7 @@
                 android:id="@+id/btn_placeRentalList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="나의 장소 대여 내역"
+                android:text="대여한 장소"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_placeList" />
 
@@ -106,7 +106,7 @@
                 android:id="@+id/btn_myRegisterPlaceList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="나의 등록 장소 목록"
+                android:text="내가 등록한 장소"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_placeRentalList" />
 

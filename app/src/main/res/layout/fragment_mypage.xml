@@ -98,7 +98,7 @@
             android:id="@+id/btn_myClassList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="내 강의 이력"
+            android:text="강의 이력 관리"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_editTutorInfo" />
 

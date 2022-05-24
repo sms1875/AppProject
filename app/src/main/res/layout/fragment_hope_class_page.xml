@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="희망하는 수강인원 규모"
+            android:text="희망 수강인원 규모"
             app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoCategory"
             app:layout_constraintTop_toBottomOf="@+id/txt_hopeClassPostInfoCategory" />
 
@@ -59,7 +59,7 @@
             android:id="@+id/txt_hopeClassPostInfoTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="희망하는 강의 시간대"
+            android:text="희망 강의 시간대"
             app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoNum"
             app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoBarChart1" />
 
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="희망하는 강의 형태 "
+            android:text="희망 강의 형태 "
             app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoTime"
             app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoBarChart3" />
 
@@ -111,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="희망하는 강의 지역 "
+            android:text="희망 강의 지역 "
             app:layout_constraintStart_toStartOf="@+id/txt_hopeClassPostInfoTime"
             app:layout_constraintTop_toBottomOf="@+id/hopeClassPostInfoPieChart2" />
 

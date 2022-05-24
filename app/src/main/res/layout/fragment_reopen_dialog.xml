@@ -1,60 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="200dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="10dp">
-            <TextView
-                android:id="@+id/txt_selectDate"
-                android:layout_width="45dp"
-                android:layout_height="20dp"
-                android:ems="10"
-                android:text="Date" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/classReopenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-            <Button
-                android:id="@+id/reopenStartDate"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:text="시작일" />
+        <TextView
+            android:id="@+id/txt_selectDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강의 시간"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/reopenEndDate"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="종료일" />
+        <Button
+            android:id="@+id/btn_addDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="강의시간 추가"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txt_selectDate2"
-                android:layout_width="45dp"
-                android:layout_height="20dp"
-                android:ems="10"
-                android:text="Time" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_classReopenDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_addDateTime"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_class_date" />
 
-            <Button
-                android:id="@+id/reopenStartTime"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:text="시작시간" />
-
-            <Button
-                android:id="@+id/reopenEndime"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:text="종료시간" />
+        <TextView
+            android:id="@+id/txt_selectOnOffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="수업 방식 선택"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_classReopenDateTime" />
 
 
-        </LinearLayout>
-    </FrameLayout>
-</LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="online 수업"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/checkOffline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selectOnOffline" />
+
+        <CheckBox
+            android:id="@+id/checkOffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offline 수업"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/checkOnline"
+            app:layout_constraintTop_toTopOf="@+id/checkOnline" />
+
+        <EditText
+            android:id="@+id/edit_classAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="강의 주소 입력"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkOnline" />
+
+        <Button
+            android:id="@+id/btn_createClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="강의개설"
+            app:layout_constraintTop_toBottomOf="@+id/edit_classAddress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

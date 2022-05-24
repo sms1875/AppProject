@@ -24,7 +24,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/homeSearchLayout"
+            android:id="@+id/classQnASearchLayout"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,16 +33,16 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_classQnA">
 
             <Spinner
-                android:id="@+id/spinner_classSearchOption"
+                android:id="@+id/spinner_classQnASearchOption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                app:layout_constraintStart_toStartOf="@+id/edit_classSearch"
-                app:layout_constraintTop_toBottomOf="@+id/edit_classSearch" />
+                app:layout_constraintStart_toStartOf="@+id/edit_classQnASearch"
+                app:layout_constraintTop_toBottomOf="@+id/edit_classQnASearch" />
 
 
             <EditText
-                android:id="@+id/edit_classSearch"
+                android:id="@+id/edit_classQnASearch"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
@@ -51,36 +51,38 @@
                 android:hint="검색"
                 android:lines="1"
                 android:singleLine="true"
-                app:layout_constraintEnd_toStartOf="@+id/btn_classSearch"
+                app:layout_constraintEnd_toStartOf="@+id/btn_classQnASearch"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btn_classSearch"
+                android:id="@+id/btn_classQnASearch"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:text="검색"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/edit_classSearch" />
+                app:layout_constraintTop_toTopOf="@+id/edit_classQnASearch" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_classReview"
+            android:id="@+id/rv_classQnA"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/lpb_buttonlist"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/homeSearchLayout"
+            app:layout_constraintTop_toBottomOf="@+id/classQnASearchLayout"
             app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/item_class_qna" />
+
+
 
         <com.lakue.pagingbutton.LakuePagingButton
             android:id="@+id/lpb_buttonlist"
@@ -90,7 +92,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <Button
+            android:id="@+id/btn_classQnAPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="작성"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_classQnA" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>
 

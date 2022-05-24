@@ -29,7 +29,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
-        android:hint="보유한 자격증을 입력하세요"
+        android:hint="보유한 자격증을 입력해 주세요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_instructorRegisterTitle"/>
 
@@ -41,7 +41,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
-        android:hint="자신의 강사 이력을 적어주세요"
+        android:hint="자신의 강의 이력을 적어주세요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_certificate"/>
 
@@ -53,7 +53,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
-        android:hint="자신의 강의 분야를 적어주세요"
+        android:hint="개설할 예정인 강의 분야를 적어주세요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_instructorHistory"/>
 
@@ -65,7 +65,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:ems="10"
-        android:hint="자신의 소개를 적어주세요"
+        android:hint="강사로서 자신을 소개해주세요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_instructorField"/>
 
@@ -73,12 +73,33 @@
         android:id="@+id/btn_instructorRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:text="신청하기"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_instructorImage" />
+
+    <ImageView
+        android:id="@+id/iv_instructorImage"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/gray_ellipse"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_instructorInfo" />
+
+    <Button
+        android:id="@+id/btn_instructorImageSelect"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="이미지선택"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_instructorImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_instructorImage"
+ />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

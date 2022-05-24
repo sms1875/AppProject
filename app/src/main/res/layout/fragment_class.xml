@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:shadowColor="@color/design_default_color_background"
-            android:text="수강중인 강좌" />
+            android:text="수강중인 강의" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_myClass"

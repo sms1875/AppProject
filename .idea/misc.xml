@@ -3,6 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout-v26/item_class_date.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/activity_class_create.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/activity_class_info.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/activity_hope_class.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/activity_main.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_class.xml" value="0.24363636363636362" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_class_info_tab.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_class_qna_tab.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_class_review_tab.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_class_search.xml" value="0.33" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_class_signup.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_home.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_hope_class_dialog.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_hope_class_forum.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_hope_class_page.xml" value="0.26811594202898553" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_hope_class_post.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_instructor_info_edit.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_instructor_registrer.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_menu.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_my_register_place.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_mypage.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_open_class.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_reopen_dialog.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_reservation_place.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/fragment_review_dialog.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class_btn.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class_date.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class_qna.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class_qna_reply.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class_review.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_class_search.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_hope_class_topic.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/item_place.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/multi_image_item.xml" value="0.48854166666666665" />
+        <entry key="..\:/Users/user/coding/android/application/app/src/main/res/layout/placeimageviewpager.xml" value="0.48854166666666665" />
         <entry key="..\:/Users/user/coding/android/project 0126 2.2 10/project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.192" />
         <entry key="..\:/Users/user/coding/android/project 0126 2.2 10/project/app/src/main/res/drawable/bg_indicator_active.xml" value="0.192" />
         <entry key="..\:/Users/user/coding/android/project 0126 2.2 10/project/app/src/main/res/drawable/bg_indicator_inactive.xml" value="0.192" />

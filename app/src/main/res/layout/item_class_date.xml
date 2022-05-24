@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp"
+    android:background="@color/cardview_shadow_start_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/txt_selectClassDate"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_selectClassDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_selectClassDate"
+        app:layout_constraintTop_toTopOf="@+id/txt_selectClassDate" />
+
+    <TextView
+        android:id="@+id/txt_selectClassTime"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Time"
+        app:layout_constraintStart_toStartOf="@+id/txt_selectClassDate"
+        app:layout_constraintTop_toBottomOf="@+id/txt_selectClassDate" />
+
+    <Button
+        android:id="@+id/btn_selectClassStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:text="시작시간"
+        app:layout_constraintStart_toEndOf="@+id/txt_selectClassTime"
+        app:layout_constraintTop_toTopOf="@+id/txt_selectClassTime" />
+
+    <Button
+        android:id="@+id/btn_selectClassEndTime"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="종료시간"
+        app:layout_constraintStart_toEndOf="@+id/btn_selectClassStartTime"
+        app:layout_constraintTop_toTopOf="@+id/txt_selectClassTime" />
+
+    <Button
+        android:id="@+id/btn_deleteDateTime"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
