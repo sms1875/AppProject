@@ -8,13 +8,13 @@ import android.graphics.drawable.Drawable
 import androidx.annotation.NonNull
 
 import androidx.recyclerview.widget.RecyclerView
-
 import android.view.LayoutInflater
 import android.view.View
 
 import android.view.ViewGroup
 import android.widget.ImageView
 import com.example.application.R
+import com.example.application.serverAddress
 
 
 class ImageSliderAdapter(context: Context, sliderImage: Array<String>) :
@@ -39,7 +39,7 @@ class ImageSliderAdapter(context: Context, sliderImage: Array<String>) :
         private val mImageView: ImageView
         fun bindSliderImage(imageURL: String?) {
             Glide.with(context)
-                .load("http://121.188.98.211:1350/db/space/getImg/"+imageURL)
+                .load(serverAddress +"/space/getImg/"+imageURL)
                 .into(mImageView)
         }
 

@@ -9,9 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-
-
 import com.example.application.network.response.*
+
 class PlaceAdapter(private val context: Context) : RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
 
     var datas = mutableListOf<placeData>()
@@ -51,7 +50,7 @@ class PlaceAdapter(private val context: Context) : RecyclerView.Adapter<PlaceAda
             if (placeImage != null) {
                 Glide
                     .with(itemView)
-                    .load(serverAddress + "/db/space/getImg/" + uri[0])//처음 오는이미지가 대표이미지
+                    .load(serverAddress + "/space/getImg/" + uri[0])//처음 오는이미지가 대표이미지
                     .override(100, 100)
                     .into(placeImage)
             }

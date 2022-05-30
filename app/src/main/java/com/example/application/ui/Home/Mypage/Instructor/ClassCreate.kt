@@ -27,6 +27,7 @@ import android.net.Uri
 import android.provider.MediaStore
 import android.view.View
 import android.widget.CompoundButton
+import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -63,6 +64,10 @@ class ClassCreateActivity  : AppCompatActivity() {
 
         val topicId = intent.getExtras()?.getString("topicId")
 
+        var minPerson = 5
+        var maxPerson = 10
+        var mon ="17:00~19:00"
+        var tue ="17:00~19:00"
 
         binding.btnNextPage.setOnClickListener{
             binding.createFirstPage.visibility= View.GONE
@@ -154,11 +159,13 @@ class ClassCreateActivity  : AppCompatActivity() {
         //retrofit
 
         binding.btnCreateClass.setOnClickListener {
+            /*
             if(binding.checkA.isChecked==true) category+="A "
             if(binding.checkB.isChecked==true) category+="B "
             if(binding.checkC.isChecked==true) category+="C "
-            if(binding.checkD.isChecked==true) category+="D "
+            if(binding.checkD.isChecked==true) category+="D "*/
 
+            category="B"
             val classnameRequestBody: RequestBody = binding.editClassName.text.toString().toPlainRequestBody()
             val classPriceRequestBody: RequestBody  = binding.editClassPrice.text.toString().toPlainRequestBody()
             val classInfoRequestBody: RequestBody  = binding.editClassInfo.text.toString().toPlainRequestBody()
@@ -169,11 +176,14 @@ class ClassCreateActivity  : AppCompatActivity() {
             val classOnOfflineRequestBody: RequestBody = onoffline.toPlainRequestBody()
             val classAddressRequestBody: RequestBody = binding.editClassAddress.text.toString().toPlainRequestBody()
             val classCategoryRequestBody: RequestBody = category.toPlainRequestBody()
-
+            val maxPersonRequestBody: RequestBody = maxPerson.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+            val minPersonRequestBody: RequestBody = minPerson.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+            val monRequestBody: RequestBody = mon.toPlainRequestBody()
+            val tueRequestBody: RequestBody = tue.toPlainRequestBody()
 
 
             val textHashMap = hashMapOf<String, RequestBody>()
-            textHashMap["className"] = classnameRequestBody
+            textHashMap.put("className",binding.editClassName.text.toString().toRequestBody("text/plain".toMediaTypeOrNull()))
             textHashMap["classPrice"] = classPriceRequestBody
             textHashMap["classInfo"] = classInfoRequestBody
             textHashMap["start_date"] = start_dateRequestBody
@@ -184,7 +194,10 @@ class ClassCreateActivity  : AppCompatActivity() {
             textHashMap["classOnOffline"] = classOnOfflineRequestBody
             textHashMap["classAddress"] = classAddressRequestBody
             textHashMap["classCategory"] = classCategoryRequestBody
-
+            textHashMap.put("maxPerson", maxPerson.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()))
+            textHashMap.put("minPerson", minPerson.toString().toRequestBody("multipart/form-data".toMediaTypeOrNull()))
+            textHashMap["mon"] = monRequestBody
+            textHashMap["tue"] = tueRequestBody
 
 
 

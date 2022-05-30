@@ -1,4 +1,4 @@
-package com.example.application
+package com.example.application.ui.Home.Mypage
 
 import android.app.Activity
 import android.graphics.drawable.Drawable
@@ -10,12 +10,14 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.application.R
+import com.example.application.ServiceGenerator
+import com.example.application.SharedPreferences
 import com.example.application.databinding.ActivityScheduleBinding
 import com.prolificinteractive.materialcalendarview.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.POST
 import java.text.SimpleDateFormat
 import java.util.*
 import com.example.application.network.response.*
@@ -39,8 +41,9 @@ class ScheduleActivity : AppCompatActivity() {
 
         val materialCalendarView = binding.calendarView
 
-        val TOKEN=SharedPreferences.prefs.getString("key","key")
-        val getScheduleService = ServiceGenerator.createService(getScheduleInterface::class.java,TOKEN)
+        val TOKEN= SharedPreferences.prefs.getString("key","key")
+        val getScheduleService =
+            ServiceGenerator.createService(getScheduleInterface::class.java, TOKEN)
 
         getScheduleService.getSchedule().enqueue(object : Callback<scheduleDataList> {
             override fun onResponse(call: Call<scheduleDataList>, response: Response<scheduleDataList>) {

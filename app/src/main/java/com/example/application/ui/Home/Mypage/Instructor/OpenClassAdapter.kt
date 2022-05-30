@@ -44,7 +44,6 @@ class OpenClassAdapter(private val context: Context) : RecyclerView.Adapter<Open
         private val classPrice: TextView? = itemView.findViewById(R.id.item_classPrice)
         private val classImage: ImageView? = itemView.findViewById(R.id.item_classImage)
         private val classOnOffline: TextView? = itemView.findViewById(R.id.item_classOnOffType)
-        private val classBtn: Button? = itemView.findViewById(R.id.item_classbtn)
 
 
         fun bind(item: classData) {
@@ -74,7 +73,6 @@ class OpenClassAdapter(private val context: Context) : RecyclerView.Adapter<Open
                     .into(classImage)
             }*/
 
-            classBtn?.text = buttonText
 
             /******************아이템클릭이벤트**********************/
             val pos = adapterPosition
@@ -82,9 +80,9 @@ class OpenClassAdapter(private val context: Context) : RecyclerView.Adapter<Open
                 itemView.setOnClickListener {
                     listener?.onItemClick(itemView,item,pos)
                 }
-                classBtn?.setOnClickListener{
+                /*classBtn?.setOnClickListener{
                     listener?.onButtonClick(itemView,item,pos)
-                }
+                }*/
             }
             /******************아이템클릭이벤트**********************/
         }

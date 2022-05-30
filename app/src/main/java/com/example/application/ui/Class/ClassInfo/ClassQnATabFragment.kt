@@ -9,16 +9,20 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import com.example.application.*
 import com.example.application.databinding.FragmentClassQnaTabBinding
-
 import com.example.application.network.response.*
+import com.example.application.network.service.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
 class ClassQnATab : Fragment() {
 
     private var _binding: FragmentClassQnaTabBinding? = null
     private val binding get() = _binding!!
 
-    lateinit var classQnAAdapter: ClassQnAAdapter
+    //lateinit var classQnAAdapter: ClassQnAAdapter
 
-    lateinit var QnAPostList: List<QnAPostList>
+    lateinit var QnAPostList: List<QnAPost>
 
     companion object {
         fun newInstant(ClassInfo: classDetailInfo): ClassQnATab {
@@ -32,11 +36,7 @@ class ClassQnATab : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentClassQnaTabBinding.inflate(inflater, container, false)
         val view = binding.root
         Log.d("111111111111111111111", arguments.toString())
@@ -46,8 +46,14 @@ class ClassQnATab : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val TOKEN=SharedPreferences.prefs.getString("key","key")
+
+        val classQNARegisterService = ServiceGenerator.createService(classQNARegisterInterface::class.java)
+        val getClassQNAListService = ServiceGenerator.createService(getClassQNAListInterface::class.java,TOKEN)
+        val getClassQNAInfoService = ServiceGenerator.createService(getClassQNAInfoInterface::class.java,TOKEN)
+
         var searchCategory=""//검색옵션
-        with(binding.spinnerClassSearchOption) {
+        with(binding.spinnerClassQnASearchOption) {
             val typeList=resources.getStringArray(com.example.application.R.array.searchOption)
             val searchOptionAdapter = SearchOptionAdapter(context, android.R.layout.simple_spinner_dropdown_item, typeList)
             adapter = searchOptionAdapter
@@ -65,10 +71,59 @@ class ClassQnATab : Fragment() {
             }//검색 옵션 설정
         }
 
-        val data=QnAPostList("0","0","auther1","QnATEST","2222-12-34")
-        val data1=QnAPostList("1","0","auther2","QnATESTREPLY","1234-56-78")
-        QnAPostList = listOf(data,data1)
-        initRecycler()//recyclerview 설정
+
+
+        val data=QnAPost("22","6test",46,null)
+
+        binding.btnClassQnAPost.setOnClickListener {
+
+/*
+            with(classQNARegisterService) {
+                QNAregister(
+                    data.Title,
+                    data.Content,
+                    data.targetClassId,
+                    data.parentDocumentId
+                ).enqueue(object :
+                    Callback<resultResponse> {
+                    override fun onResponse(
+                        call: Call<resultResponse>,
+                        response: Response<resultResponse>
+                    ) {
+                        android.util.Log.e("성공", "${response}")
+                    }
+
+                    override fun onFailure(call: Call<resultResponse>, t: Throwable) {
+                        android.util.Log.e("실패", "${t}")
+                    }
+                })*/
+/*
+            with(getClassQNAListService) {
+
+                getQNAList(data.targetClassId,1).enqueue(object : Callback<QnAData> {
+                    override fun onResponse(call: Call<QnAData>, response: Response<QnAData>) {
+                        android.util.Log.e("성공", "${response.body()}")
+                    }
+                    override fun onFailure(call: Call<QnAData>, t: Throwable) {
+                        android.util.Log.e("실패", "${t}")
+                    }
+                })
+*/
+            with(getClassQNAInfoService) {
+
+                getQNAInfo(1).enqueue(object : Callback<QnADeInfo> {
+                    override fun onResponse(call: Call<QnADeInfo>, response: Response<QnADeInfo>) {
+                        android.util.Log.e("성공", "${response.body()}")
+                    }
+                    override fun onFailure(call: Call<QnADeInfo>, t: Throwable) {
+                        android.util.Log.e("실패", "${t}")
+                    }
+                })
+
+            }
+        }
+
+        //initRecycler()//recyclerview 설정
 /*
             val getReviewClassService = ServiceGenerator.createService(getReviewClassInterface::class.java)
 
@@ -169,14 +224,14 @@ class ClassQnATab : Fragment() {
             super.onDestroyView()
             _binding = null
         }
+/*
+       private fun initRecycler() {
+           /assQnAAdapter = ClassQnAAdapter(requireContext())
+           binding.rvClassQnA.adapter = classQnAAdapter
+           binding.rvClassQnA.addItemDecoration(ClassReviewVerticalItemDecorator(20))
+           binding.rvClassQnA.addItemDecoration(ClassReviewHorizontalItemDecorator(10))
 
-        private fun initRecycler() {
-            classQnAAdapter = ClassQnAAdapter(requireContext())
-            binding.rvClassReview.adapter = classQnAAdapter
-            binding.rvClassReview.addItemDecoration(ClassReviewVerticalItemDecorator(20))
-            binding.rvClassReview.addItemDecoration(ClassReviewHorizontalItemDecorator(10))
+           classQnAAdapter.datas = QnAPostList
 
-            classQnAAdapter.datas = QnAPostList
-
-    }
+   }*/
 }

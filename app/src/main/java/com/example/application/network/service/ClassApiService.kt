@@ -28,6 +28,7 @@ interface classSearchInterface {
     fun classSearch(
         @Field("string") string:String,
         @Field("category") category:String,
+        @Field("orderByString") orderByString:String,
     ): Call<classDataList>
 }//강의 취소
 
@@ -68,6 +69,7 @@ interface cancelRegisterClassInterface {
     fun singupClass(@Field("classId") classId: String?
     ): Call<resultResponse>
 }//로그인 인터페이스
+
 interface getReviewClassInterface {
     @FormUrlEncoded
     @POST("/class/getReview")
@@ -127,7 +129,34 @@ interface reopenClassInterface {
     ): Call<resultResponse>
 }
 
+interface classQNARegisterInterface {
+    @FormUrlEncoded
+    @POST("/qna/register")
+    fun QNAregister(
+        @Field("Title") Title:String,
+        @Field("content") Content:String,
+        @Field("targetClassId") targetClassId:Int,
+        @Field("parentDocumentId") parentDocumentId: Int?,
+    ): Call<resultResponse>
+}
 
+
+interface getClassQNAListInterface {
+    @FormUrlEncoded
+    @POST("/qna/get")
+    fun getQNAList(
+        @Field("targetClassId") targetClassId:Int,
+        @Field("pageNo") pageNo:Int,
+    ): Call<QnAData>
+}
+
+interface getClassQNAInfoInterface {
+    @FormUrlEncoded
+    @POST("/qna/getQna")
+    fun getQNAInfo(
+        @Field("documentId") documentId:Int,
+    ): Call<QnADeInfo>
+}
 
 
 

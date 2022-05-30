@@ -37,7 +37,7 @@ class BannerAdapter(var data: MutableList<String>) : RecyclerView.Adapter<Banner
         fun setItem(uri: String){
             Glide
                 .with(itemView)
-                //.load(serverAddress +"/db/class/getImg/" + uri)//처음 오는이미지가 대표이미지
+                //.load(serverAddress +"/class/getImg/" + uri)//처음 오는이미지가 대표이미지
                 .load("https://www.google.com/images/" + uri)//처음 오는이미지가 대표이미지
                 .override(100, 100)
                 .into(binding.itemBannerImage)

@@ -1,8 +1,6 @@
-package com.example.application.ui.Home
+package com.example.application.ui.Home.Mypage.Instructor
 
 import android.app.AlertDialog
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +8,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.application.*
 import com.example.application.ui.Class.ClassInfo.ClassInfoActivity
@@ -18,11 +15,8 @@ import com.example.application.databinding.FragmentOpenClassBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.*
-import java.util.*
 import kotlin.collections.ArrayList
 
-import com.example.application.network.response.*
 import com.example.application.network.response.*
 import com.example.application.network.service.*
 
@@ -143,6 +137,7 @@ class OpenClassFragment : Fragment() {
         binding.rvCompletedClass.addItemDecoration(HorizontalItemDecorator(10))
 
         completedClassAdapter.datas = completedClassList
+
         completedClassAdapter.setOnItemClickListener(object : OpenClassAdapter.OnItemClickListener {
             override fun onButtonClick(v: View, data: classData, pos: Int) {
                 var start_date=""
@@ -169,11 +164,11 @@ class OpenClassFragment : Fragment() {
                         if(alertDialog == null) {
                             return@also
                         }
+                        /*
                         var edit1: Button? = alertDialog.findViewById(R.id.reopenStartDate)
                         var edit2: Button? = alertDialog.findViewById(R.id.reopenEndDate)
                         var edit3: Button? = alertDialog.findViewById(R.id.reopenStartTime)
                         var edit4: Button? = alertDialog.findViewById(R.id.reopenEndime)
-
                         edit1?.setOnClickListener {
                             Log.d("a","tetawetaw")
                             val cal = Calendar.getInstance()
@@ -237,7 +232,7 @@ class OpenClassFragment : Fragment() {
                             ).show()
 
 
-                        }
+                        }*/
                     }
             }
 

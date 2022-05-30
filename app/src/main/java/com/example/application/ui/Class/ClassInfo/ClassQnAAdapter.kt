@@ -10,10 +10,11 @@ import com.example.application.databinding.ItemClassQnaBinding
 import com.example.application.databinding.ItemClassQnaReplyBinding
 
 import com.example.application.network.response.*
+/*
 class ClassQnAAdapter(private val context: Context) :  RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var _binding: ClassQnAAdapter? = null
 
-    lateinit var datas : List<QnAPostList>
+    //lateinit var datas : List<QnAPostList>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType) {
@@ -86,3 +87,4 @@ class ClassQnAHorizontalItemDecorator(private val divHeight : Int) : RecyclerVie
 }
 
 
+*/

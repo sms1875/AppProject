@@ -65,6 +65,9 @@ class LoginActivity : AppCompatActivity() {
                             SharedPreferences.prefs.setString("key",result.token)
                             SharedPreferences.prefs.setString("userName",result.userName)
                             SharedPreferences.prefs.setString("userType",result.userType)
+
+                            val TOKEN=SharedPreferences.prefs.getString("key","key")
+
                             val toast = Toast.makeText(applicationContext, "환영합니다", Toast.LENGTH_SHORT)
                             toast.show()
 

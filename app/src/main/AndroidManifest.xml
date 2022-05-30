@@ -29,7 +29,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="" />
+            android:value="AIzaSyAbH5SUHp5g6N2xQgzf6Z6oz0h3UDH-yVY" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -54,7 +54,7 @@
             android:name=".ui.Class.ClassInfo.ClassInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".ScheduleActivity"
+            android:name=".ui.Home.Mypage.ScheduleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.Home.Menu.Place.PlaceDetailActivity"

@@ -24,13 +24,91 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/classQnASearchLayout"
+            android:id="@+id/classQnAInfoLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="500dp"
+            android:background="@drawable/gray_ellipse"
+            app:layout_constraintTop_toBottomOf="@+id/txt_classQnA">
+
+            <TextView
+                android:id="@+id/txt_classQnAInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="강의제목"
+                android:textSize="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_classQnAInfoWriter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="작성자"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_classQnAInfoTitle" />
+
+
+            <TextView
+                android:id="@+id/txt_classQnAInfoWritedtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022-05-29 11:26:50"
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_classQnAInfoWriter"
+                app:layout_constraintTop_toBottomOf="@+id/txt_classQnAInfoTitle" />
+
+            <TextView
+                android:id="@+id/txt_classQnAInfoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조회수 : "
+                android:textSize="15dp"
+                app:layout_constraintStart_toEndOf="@+id/txt_classQnAInfoWritedtime"
+                app:layout_constraintTop_toBottomOf="@+id/txt_classQnAInfoTitle" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_classQnA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_classQnA">
+            app:layout_constraintTop_toBottomOf="@+id/classQnAInfoLayout"
+            tools:listitem="@layout/item_class_qna" />
+
+
+        <com.lakue.pagingbutton.LakuePagingButton
+            android:id="@+id/lpb_buttonlist"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_classQnA" />
+
+        <Button
+            android:id="@+id/btn_classQnAPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:text="작성"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lpb_buttonlist" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/classQnASearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_classQnAPost">
 
             <Spinner
                 android:id="@+id/spinner_classQnASearchOption"
@@ -65,44 +143,10 @@
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/edit_classQnASearch" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_classQnA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/lpb_buttonlist"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/classQnASearchLayout"
-            app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/item_class_qna" />
-
-
-
-        <com.lakue.pagingbutton.LakuePagingButton
-            android:id="@+id/lpb_buttonlist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btn_classQnAPost"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:text="작성"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_classQnA" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 

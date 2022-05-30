@@ -1,4 +1,4 @@
-package com.example.application.ui.Home.Mypage
+package com.example.application.ui.Home.Mypage.Instructor
 import com.example.application.network.service.*
 import android.os.Bundle
 import android.util.Log
@@ -12,9 +12,6 @@ import com.example.application.databinding.FragmentInstructorInfoEditBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
 
 
 import com.example.application.network.response.*

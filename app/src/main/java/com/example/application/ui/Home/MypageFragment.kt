@@ -13,8 +13,10 @@ import com.example.application.ui.Class.ClassCreateActivity
 import com.example.application.ui.auth.LoginActivity
 import com.example.application.databinding.FragmentMypageBinding
 import com.example.application.*
+import com.example.application.ui.Home.Mypage.Instructor.OpenClassFragment
 import com.example.application.ui.auth.UserInfoActivity
 import com.example.application.ui.Home.Mypage.InstructorRegisterFragment
+import com.example.application.ui.Home.Mypage.ScheduleActivity
 import com.example.application.ui.MainActivity
 
 

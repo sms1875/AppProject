@@ -64,7 +64,7 @@ class ClassAdapter(private val context: Context) : RecyclerView.Adapter<ClassAda
             if (classImage != null) {
                 Glide
                     .with(itemView)
-                    .load(serverAddress+"/db/class/getImg/" + uri[0])//처음 오는이미지가 대표이미지
+                    .load(serverAddress+"/class/getImg/" + uri[0])//처음 오는이미지가 대표이미지
                     .override(100, 100)
                     .into(classImage)
             }

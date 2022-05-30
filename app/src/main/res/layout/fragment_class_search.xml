@@ -73,7 +73,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="평점"
+                android:text="리뷰 점수"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="후기▲"
+                android:text="리뷰 개수"
                 app:layout_constraintStart_toEndOf="@+id/btn_classSearchSort1"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,7 +91,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="수강인원▲"
+                android:text="수강 신청 인원"
                 app:layout_constraintStart_toEndOf="@+id/btn_classSearchSort2"
                 app:layout_constraintTop_toTopOf="parent" />
 

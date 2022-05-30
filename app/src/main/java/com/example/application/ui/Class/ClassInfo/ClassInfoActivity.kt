@@ -33,7 +33,6 @@ class ClassInfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("a","1")
         binding = ActivityClassInfoBinding.inflate(layoutInflater)
 
         classid= intent.getStringExtra("classID").toString() //POST요청에 사용할 classid
@@ -58,7 +57,7 @@ class ClassInfoActivity : AppCompatActivity() {
                 val uri = classInfo.classImage.split(",")
                 Glide
                     .with(this@ClassInfoActivity)
-                    .load("http://121.188.98.211:1350/db/class/getImg/" + uri[0])
+                    .load(serverAddress+"/class/getImg/" + uri[0])
                     .override(100, 100)
                     .into(binding.ivClassImage)
                 binding.txtClassName.text=classInfo.className
@@ -172,15 +171,6 @@ class ClassInfoActivity : AppCompatActivity() {
     }//프레그먼트 어댑터
 
 }
-
-
-/*interface checkClassInterface{
-    @FormUrlEncoded
-    @POST("/db/class/")
-    fun checkClassService(@Field("classId") classId: String?
-    ): Call<resultResponse>
-}*/
-
 
 
 

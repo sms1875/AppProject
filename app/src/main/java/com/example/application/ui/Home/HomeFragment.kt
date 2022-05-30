@@ -68,9 +68,9 @@ class HomeFragment : Fragment() {
             }
         })
 
-        var classData1=classData("test","tutor","5000","","id","1")
-        var classData2=classData("name","tutor","4000","","i2","2")
-        var classD=listOf(classData1,classData2)
+        //var classData1=classData("test","tutor","5000","","id","1")
+        //var classData2=classData("name","tutor","4000","","i2","2")
+        //var classD=listOf(classData1,classData2)
 
 
 
