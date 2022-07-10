@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.IOException
 import okhttp3.logging.HttpLoggingInterceptor
 
-const val serverAddress ="http://121.188.98.211:1350"
+const val serverAddress =
 
 object ServiceGenerator {
 

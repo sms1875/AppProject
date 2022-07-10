@@ -1,4 +1,4 @@
-package com.example.application.ui.auth
+package com.example.application.ui.user
 
 import android.view.View
 import androidx.lifecycle.ViewModel

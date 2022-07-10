@@ -68,7 +68,7 @@ class OpenClassAdapter(private val context: Context) : RecyclerView.Adapter<Open
             if (classImage != null) {
                 Glide
                     .with(itemView)
-                    .load("http://121.188.98.211:1350/db/class/getImg/" + uri[0])//처음 오는이미지가 대표이미지
+                    .load("http://121.188.98.211:1350/class/getImg/" + uri[0])//처음 오는이미지가 대표이미지
                     .override(100, 100)
                     .into(classImage)
             }*/

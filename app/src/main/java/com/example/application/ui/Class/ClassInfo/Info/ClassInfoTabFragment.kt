@@ -1,4 +1,4 @@
-package com.example.application.ui.Class.ClassInfo
+package com.example.application.ui.Class.ClassInfo.Info
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,4 +1,4 @@
-package com.example.application.ui.Home
+package com.example.application.ui.Home.Mypage.User
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -18,7 +18,6 @@ import com.example.application.databinding.FragmentClassSignupBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.*
 import kotlin.collections.ArrayList
 import com.example.application.network.response.*
 import com.example.application.network.service.*

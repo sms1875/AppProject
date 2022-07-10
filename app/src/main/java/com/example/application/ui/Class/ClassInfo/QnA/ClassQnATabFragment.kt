@@ -1,4 +1,4 @@
-package com.example.application.ui.Class.ClassInfo
+package com.example.application.ui.Class.ClassInfo.QnA
 
 import android.os.Bundle
 import android.util.Log

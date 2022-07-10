@@ -1,4 +1,4 @@
-package com.example.application.ui.Class.ClassInfo
+package com.example.application.ui.Class.ClassInfo.Review
 
 import android.content.Context
 import android.graphics.Rect

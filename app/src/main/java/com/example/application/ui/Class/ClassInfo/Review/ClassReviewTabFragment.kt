@@ -1,4 +1,4 @@
-package com.example.application.ui.Class.ClassInfo
+package com.example.application.ui.Class.ClassInfo.Review
 
 import android.os.Bundle
 import android.util.Log
@@ -12,8 +12,6 @@ import com.lakue.pagingbutton.OnPageSelectListener
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 import com.example.application.network.service.*
 import com.example.application.network.response.*

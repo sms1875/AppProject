@@ -1,4 +1,4 @@
-package com.example.application.ui.auth
+package com.example.application.ui.user
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -12,9 +12,6 @@ import com.example.application.network.response.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
 
 class UserInfoActivity : AppCompatActivity() {
 

@@ -14,6 +14,13 @@ interface singInterface {
     ) : Call<loginResponse>
 }//로그인 인터페이스
 
+interface tokenInterface {
+    @FormUrlEncoded
+    @POST("/users/registerToken")
+    fun token(@Field("userToken") userToken:String
+    ) : Call<resultResponse>
+}//로그인 인터페이스
+
 interface registerInterface {
     @FormUrlEncoded
     @POST("/users/addUser")

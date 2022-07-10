@@ -15,11 +15,11 @@ import com.google.android.material.tabs.TabLayoutMediator
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
 import com.example.application.network.response.*
 import com.example.application.network.service.*
+import com.example.application.ui.Class.ClassInfo.Info.ClassInfoTabFragment
+import com.example.application.ui.Class.ClassInfo.QnA.ClassQnATab
+import com.example.application.ui.Class.ClassInfo.Review.ClassReviewTabFragment
 
 
 class ClassInfoActivity : AppCompatActivity() {

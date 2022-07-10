@@ -10,13 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.application.ui.Class.ClassCreateActivity
-import com.example.application.ui.auth.LoginActivity
+import com.example.application.ui.user.LoginActivity
 import com.example.application.databinding.FragmentMypageBinding
 import com.example.application.*
 import com.example.application.ui.Home.Mypage.Instructor.OpenClassFragment
-import com.example.application.ui.auth.UserInfoActivity
-import com.example.application.ui.Home.Mypage.InstructorRegisterFragment
-import com.example.application.ui.Home.Mypage.ScheduleActivity
+import com.example.application.ui.user.UserInfoActivity
+import com.example.application.ui.Home.Mypage.User.InstructorRegisterFragment
+import com.example.application.ui.Home.Mypage.User.ScheduleActivity
+import com.example.application.ui.Home.Mypage.User.SignupClassFragment
 import com.example.application.ui.MainActivity
 
 

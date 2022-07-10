@@ -1,7 +1,6 @@
-package com.example.application.ui.auth
+package com.example.application.ui.user
 
 import android.app.Application
-import androidx.lifecycle.LiveData
 
 class authRepository (application: Application) {
 
